@@ -1,15 +1,9 @@
-FROM java:8.7.0-alpine
+FROM java:8
 
-RUN mkdir -p /usr/app/server
-WORKDIR /usr/app/server
+VOLUME /tmp
 
+EXPOSE 8888
 
-COPY ./target/spring-boot-react-docker-demo-0.0.1-SNAPSHOT.jar /usr/app/server
+ADD target/spring-boot-react-docker-demo-0.0.1-SNAPSHOT.jar spring-boot-react-docker-demo-0.0.1-SNAPSHOT.jar
 
-WORKDIR /usr/app
-EXPOSE 8080
-
-
-RUN sh -c 'touch spring-boot-react-docker-demo-0.0.1-SNAPSHOT'
-
-CMD ["java","-jar","spring-boot-react-docker-demo-0.0.1-SNAPSHOT"]
+ENTRYPOINT ["java","-jar","spring-boot-react-docker-demo-0.0.1-SNAPSHOT"]
