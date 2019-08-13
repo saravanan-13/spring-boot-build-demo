@@ -1,0 +1,5 @@
+com\pack\springreact\SpringBootReactDockerDemoApplication.class
+com\pack\springreact\controller\ReactController.class
+com\pack\springreact\repository\UserRepository.class
+com\pack\springreact\model\User.class
+com\pack\springreact\service\UserService.class
