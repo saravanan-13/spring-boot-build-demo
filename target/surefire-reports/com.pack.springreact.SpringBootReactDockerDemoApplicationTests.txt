@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.pack.springreact.SpringBootReactDockerDemoApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.489 s - in com.pack.springreact.SpringBootReactDockerDemoApplicationTests
