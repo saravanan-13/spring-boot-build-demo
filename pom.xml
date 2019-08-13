@@ -14,9 +14,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-react-docker-demo</name>
 	<description>Demo project for Spring Boot and React</description>
-
 	<properties>
 		<java.version>1.8</java.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<dependencies>
@@ -60,19 +61,16 @@
 		</dependency>
 	</dependencies>
 
+
 	<build>
+
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-								<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
-					<encoding>UTF-8</encoding>
+				<version>3.1</version>
+				<configuration>
+					<fork>true</fork>
+					<executable>C:\Program Files\Java\jdk1.8.0_221\bin\javac.exe</executable>
 				</configuration>
 			</plugin>
 		</plugins>
