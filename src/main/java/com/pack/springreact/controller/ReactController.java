@@ -15,23 +15,9 @@ import com.pack.springreact.service.UserService;
 @RestController
 public class ReactController {
 
-	@Autowired
-	UserService userService;
-	@Autowired
-	ObjectMapper mapper;
-
-	@CrossOrigin(origins = "http://localhost:3000")
+	@CrossOrigin(origins = "*")
 	@GetMapping("/")
-	public ObjectNode getdata() {
-		List<User> userList = userService.getAllUsers();
-		ObjectNode objectNode = mapper.createObjectNode();
-
-		for (User user : userList) {
-			objectNode.put("id", user.getId());
-			objectNode.put("email", user.getEmail());
-			objectNode.put("name", user.getName());
-		}
-
-		return objectNode;
+	public String getdata() {
+		return "Hello";
 	}
 }
